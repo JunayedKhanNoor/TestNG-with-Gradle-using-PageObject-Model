@@ -19,6 +19,8 @@ public class Setup {
 
     @AfterTest
     public void closeDriver() {
-        driver.close();
+        DashboardPage dashboardPage = new DashboardPage(driver);
+        dashboardPage.doLogout();
+       // driver.close();
     }
 }
